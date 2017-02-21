@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git log \
+  --pretty=format:"%s%n%n%b" \
+  --max-count=1 \
+  $@
