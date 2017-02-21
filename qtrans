@@ -1,0 +1,13 @@
+#!/bin/sh
+
+trans \
+  -no-ansi \
+  -no-auto \
+  -show-alternatives=n \
+  -show-dictionary=n \
+  -show-languages=n \
+  -show-original=n \
+  -show-original-phonetics=n \
+  -show-prompt-message=n \
+  -show-translation-phonetics=n \
+  $@
