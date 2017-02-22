@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Read C++ code from standard input and validate it
+
+clang++ -fsyntax-only -x c++ $@ - && echo "// OK"
