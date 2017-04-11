@@ -1,0 +1,10 @@
+#!/bin/sh
+
+git rev-parse --is-inside-work-tree >/dev/null
+if [ $? -ne 0 ] ; then
+  exit 1
+fi
+
+git ls-files |
+  grep '.[ch]\(pp\)\?$' |
+  xargs -n1 clang-format -style=file -i
