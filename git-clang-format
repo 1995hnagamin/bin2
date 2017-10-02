@@ -6,5 +6,5 @@ if [ $? -ne 0 ] ; then
 fi
 
 git ls-files |
-  grep '.[ch]\(pp\)\?$' |
+  grep '\.[ch]\(pp\)\?$' |
   xargs -n1 clang-format -style=file -i
