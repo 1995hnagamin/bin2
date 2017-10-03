@@ -3,7 +3,7 @@
 check_files() {
   EXIT=0
   while read -r line; do
-    clang-format -style=file -output-replacements-xml |
+    clang-format -style=file -output-replacements-xml $line |
       grep '<replacement ' >/dev/null
     if [ $? -ne 1 ] ; then
       echo clang-format:$line
@@ -19,5 +19,5 @@ if [ $? -ne 0 ] ; then
 fi
 
 git ls-files |
-  grep '.[ch]\(pp\)\?$' |
+  grep '\.[ch]\(pp\)\?$' |
   check_files
