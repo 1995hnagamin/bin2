@@ -1,0 +1,8 @@
+#!/bin/sh
+
+clang++ \
+  -O0 \
+  -fsyntax-only \
+  -Xclang \
+  -ast-dump \
+  $@
