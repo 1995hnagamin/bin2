@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -eux
+
+g++ -std=c++14 -Wall -Wextra $@
