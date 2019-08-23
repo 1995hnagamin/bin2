@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -eux
+
+g++ -std=c++14 -Wall -Wextra -g -fsanitize=undefined -D_GLIBCXX_DEBUG $@
